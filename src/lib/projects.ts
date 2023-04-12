@@ -7,7 +7,7 @@ const projects = [{
     link: "https://app.calandrier.com",
     langs:["sveltekit", "js", "ts", "sass",],
     apis_used:["google-agenda", "outlook", "jira", "supabase", "stripe", "trello"],
-    platforms_used:["supabase", "stripe", "googlecloud"],
+    platforms_used:["supabase", "vercel", "stripe", "googlecloud"],
 },{
     title: "Planification",
     ref:"planification",
@@ -24,7 +24,7 @@ const projects = [{
     fileName: "brands/github.svg",
     description: "Development of a Task Management application (interface, db structure, interactions) connected to a Dolibarr ERP.",
     long_description: "Development of a Task Management application (interface, db structure, interactions) connected to a Dolibarr ERP.",
-    link: "https://app.calandrier.com" ,
+    link: "empty" ,
     langs:["sveltekit", "js", "php", "ts", "css",],
     apis_used:[],
     platforms_used:["figma", "dolibarr"],

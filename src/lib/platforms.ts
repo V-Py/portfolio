@@ -10,6 +10,7 @@ const platforms = [
     {name: 'Google Cloud', short:'googlecloud', src: 'googlecloud.svg', color:"#4285F4"},
     {name: 'Mailchimp', short:'mailchimp', src: 'mailchimp.svg', color:"#FFE01B"},
     {name: 'Github', short:'github', src: 'github.svg', color:"#fff"},
+    {name: 'Vercel', short:'vercel', src: 'vercel.svg', color:"#000"},
 ]
 
 export default platforms;

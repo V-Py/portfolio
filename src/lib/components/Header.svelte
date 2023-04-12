@@ -11,10 +11,12 @@
 <nav class="navbar bg-slate-900 text-white w-full flex">
     <label class="btn btn-ghost btn-circle avatar" for="main-img">
         <div class="w-10 rounded-full">
-          {#if $page.url.pathname === '/' || $page.url.pathname === '/projects'}
+          {#if $page.url.pathname === '/'}
+            <div class="bg-gray-500 block w-full h-full"></div>
+          {:else if $page.url.pathname === '/projects'}
             <a href="/"><img src="/me.jpg" alt="me" id="main-img"/></a>
           {:else}
-            <a href="/projects"><img src="/arrow-left-light.svg" alt="return" width="30" id="main-img"/></a>
+            <a href="/projects"><img src="/arrow-left-light.svg" alt="return" width="30"/></a>
           {/if}
         </div>
       </label>
@@ -22,8 +24,8 @@
     </div>
     <div>
       <ul class="menu menu-horizontal px-1">
-        <li><a href="/projects" class="text-xl font-bold main-text">Projects</a></li>
-        <li><a href="/curriculum">Curriculum</a></li>
+        <li ><a href="/projects" class="text-xl active:bg-slate-700 font-bold main-text">Projects</a></li>
+        <li><a href="/curriculum" class="active:bg-slate-700">Curriculum</a></li>
         <!-- <li><a href="/aboutme">About me</a></li> -->
       </ul>
     </div>
@@ -40,4 +42,8 @@
   .main-text{
     view-transition-name:main-header-text;
   } 
+
+  #main-img{
+    view-transition-name:main-header-img;
+  }
 </style>

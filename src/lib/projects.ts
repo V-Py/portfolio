@@ -21,7 +21,7 @@ const projects = [{
 },{
     title: "Gestion des tâches",
     ref:"tasks",
-    fileName: "brands/github.svg",
+    fileName: "tasks.png",
     description: "Development of a Task Management application (interface, db structure, interactions) connected to a Dolibarr ERP.",
     long_description: "Development of a Task Management application (interface, db structure, interactions) connected to a Dolibarr ERP.",
     link: "empty" ,

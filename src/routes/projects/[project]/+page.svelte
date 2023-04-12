@@ -1,19 +1,17 @@
 <script>
   	import { onMount } from 'svelte';
+	import {scale} from 'svelte/transition';
 	import languages from '$lib/languages';
 	import apis from '$lib/apis';
 	import platforms from '$lib/platforms';
-	import {scale} from 'svelte/transition';
+	import Description from '$lib/components/ProjectDetails/Description.svelte';
+	import Title from '$lib/components/ProjectDetails/Title.svelte';
+	import IconsList from '$lib/components/ProjectDetails/IconsList.svelte';
 
 	export let data;
 	let show_screenshots = false;
 	$: ({ title, fileName, ref, description, long_description, link, langs, apis_used, platforms_used} = data);
 
-	let carousel; // for calling methods of the carousel instance
-  
-	const handleNextClick = () => {
-		carousel.goToNext()
-	}
 
     onMount(() => {
         console.log('onMount', data);
@@ -26,87 +24,18 @@
 
 <div class="w-full h-full flex flex-col bg-slate-800 text-white">
 	<div class="top w-full flex items-center justify-around px-10" style:flex={2}>
-		<div class="flex items-center justify-center">
-			<img
-				class="object-cover main-img"
-				src={`/${fileName}`}
-				width="100"
-				alt={`picture of ${title}`}
-				style:--tag={`project-${ref}`}
-			/>
-
-			<div class="flex flex-col items-center justify-center">
-				<h1 class="text-4xl font-bold mt-4 ml-5" style:--tag="title-{ref}">{title}</h1>
-				<div class="flex-1 ml-5 mt-3 flex items-center link text-white text-xs opacity-70 hover:opacity-90 active:opacity-100">
-					<a target="_blank" href="{link}" class="flex">{link} <img alt="arrow-leave" class="ml-2" width="10" src="/up-right-from-square-thin.svg"/></a>
-				</div>
-			</div>
-		</div>
+		<Title {fileName} {title} {link} {ref}/>
 
 		{#if langs.length > 0}
-		<div class="flex flex-col items-center hover:bg-slate-700 py-5 px-8 rounded-md">
-			<h2 class="text-xl font-bold mb-2">Technical skills used</h2>
-			<div class="grid grid-cols-3 grid-flow-row w-48">
-				{#each langs as lang_used}
-					{@const language = languages.find(lang => lang.short === lang_used)}
-					{#if language && language?.src}
-					<img 
-						in:scale
-						class="icons"
-						src={`/brands/${language.src}`}
-						alt={language.short}
-						title={language.name}
-						width="30"
-						style="margin:10px;"
-					/>
-					{/if}
-				{/each}
-			</div>
-		</div>
+			<IconsList used={langs} items={languages} title="{`Technical skills used`}"/>
 		{/if}
 
 		{#if apis_used.length > 0}
-		<div class="flex flex-col items-center hover:bg-slate-700 py-5 px-8 rounded-md">
-			<h2 class="text-xl font-bold mb-2">APIs used</h2>
-			<div class="grid grid-cols-3 grid-flow-row w-48">
-				{#each apis_used as api_used}
-					{@const api = apis.find(lang => lang.short === api_used)}
-					{#if api && api?.src}
-						<img 
-							in:scale
-							class="icons"
-							src={`/brands/${api.src}`}
-							alt={api.short}
-							title={api.name}
-							width="30"
-							style="margin:10px;"
-						/>
-					{/if}
-				{/each}
-			</div>
-		</div>
+			<IconsList used={apis_used} items={apis} title="{`APIs used`}"/>
 		{/if}
 
 		{#if platforms_used.length > 0}
-		<div class="flex flex-col items-center hover:bg-slate-700 py-5 px-8 rounded-md">
-			<h2 class="text-xl font-bold mb-2">Platforms used</h2>
-			<div class="grid grid-cols-3 grid-flow-row w-48">
-				{#each platforms_used as platform_used}
-					{@const platform = platforms.find(platform => platform.short === platform_used)}
-					{#if platform && platform?.src}
-						<img 
-							in:scale
-							class="icons"
-							src={`/brands/${platform.src}`}
-							alt={platform.short}
-							title={platform.name}
-							width="30"
-							style="margin:10px;"
-						/>
-					{/if}
-				{/each}
-			</div>
-		</div>
+			<IconsList used={platforms_used} items={platforms} title="{`Platforms used`}"/>
 		{/if}
 	</div>
 	<div class="bot w-full flex justify-center" style:flex={3}>

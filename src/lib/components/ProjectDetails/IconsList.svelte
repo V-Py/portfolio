@@ -27,12 +27,4 @@
          
         {/each}
     </div>
-    <!-- <p class="text-xs italic opacity-70">
-        {#each used as item_used, index_used}
-            {@const item = items.find(item => item.short === item_used)}
-            {#if item && item?.src}
-            {item.name}{#if index_used != (used.length -1)},&nbsp{/if}
-            {/if}
-        {/each}
-    </p> -->
 </div>

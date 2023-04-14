@@ -22,8 +22,8 @@
 	<title>Project - {title}</title>
 </svelte:head>
 
-<div class="w-full h-full flex flex-col bg-slate-800 text-white">
-	<div class="top w-full flex items-center justify-around px-10" style:flex={2}>
+<div class="w-full flex flex-col bg-slate-800 text-white pt-20">
+	<div class="top w-full flex flex-col lg:flex-row items-center justify-around px-10" style:flex={2}>
 		<Title {fileName} {title} {link} {ref}/>
 
 		{#if langs.length > 0}
@@ -38,11 +38,20 @@
 			<IconsList used={platforms_used} items={platforms} title="{`Platforms used`}"/>
 		{/if}
 	</div>
-	<div class="bot w-full flex justify-center" style:flex={3}>
-		<div class="flex flex-1 mt-10">
-			<div class="flex flex-col items-center p-10">
-				<p>{long_description}</p>
-			</div>
+	<div class="bot w-full flex flex-col sm:flex-row justify-center" style:flex={3}>
+		<div class="flex flex-col flex-1 mt-0 p-5 sm:mt-10 sm:p-10">
+			<h2 class="flex flex-col items-center text-base p-3 lg:p-5 lg:text-lg 2xl:p-10 2xl:text-xl font-bold">
+				<p>{description}</p>
+			</h2>
+			<p class="text-justify text-gray-400 columns-1 text-xs leading-4 lg:leading-5 lg:px-5 lg:text-sm 2xl:px-10 2xl:text-base 2xl:leading-6">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+				molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+				numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+				optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+				obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+				nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+				tenetur error, harum nesciunt ipsum debitis quas aliquid.
+			</p>
 		</div>
 		<div class="flex flex-1 items-center justify-center">
 			{#if show_screenshots}
@@ -52,14 +61,10 @@
 				</div>
 			</div>
 			{:else}
-				<div>Screenshots incoming ⌛</div>
+				<div class="p-3">Screenshots incoming <span class="hourglass">⌛</span></div>
 			{/if}
 		</div>
 	</div>
-</div>
-
-<div class="absolute w-56 h-56 top-0 left-0 bg-orange opacity-40 z-50">
-
 </div>
 
 <style>
@@ -90,4 +95,21 @@
 	.avatar:hover div{
 		transform:scale(1.1) !important;
 	}
+
+	
+    .hourglass{
+        /* transform:rotate(25deg); */
+        animation: rotation 3s infinite ease-in-out;
+        display:inline-block;
+        /* background:orange; */
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
 </style>

@@ -4,7 +4,7 @@
 
 </script>
 
-<div class="grid bg-slate-800 grid grid-cols-3 grid-rows-2 gap-3 p-1 w-full h-full">
+<div class="grid bg-slate-800 grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-3 p-1 w-full h-full overflow-hidden">
     {#each projects as project}
         <Project {project} on:projectClicked/>
     {/each}

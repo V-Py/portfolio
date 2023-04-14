@@ -2,13 +2,14 @@
     import languages from '$lib/languages';
     import apis from '$lib/apis';
     import platforms from '$lib/platforms';
+    import {scale, fade} from 'svelte/transition';
 
     import {createEventDispatcher} from 'svelte';
     const dispatch = createEventDispatcher();
     export let project:{title:string, fileName:string, ref:string, description:string, link:string, apis_used:string[], langs:string[], platforms_used:string[]};
 
 </script>
-    <a class="project card bg-transparent hover:bg-slate-900 text-white hover:cursor-pointer h-56 w-full flex flex-col p-10" href={`/projects/${project.ref}`}>
+    <a in:fade class="project card bg-transparent hover:bg-slate-900 text-white hover:cursor-pointer h-56 w-full flex flex-col p-10 md:p-5 lg:p-10" href={`/projects/${project.ref}`}>
         <div class="flex-1 flex items-center">
             <div class="avatar">
                 <div class="w-12" style="aspect-ratio:initial!important;">

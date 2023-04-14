@@ -1,9 +1,10 @@
 <script>
-    import languages from '$lib/languages'
+    import languages from '$lib/languages';
+    import {scale} from 'svelte/transition';
 </script>
 
-<div class="flex items-center justify-center w-full h-full">
-    <div class="flex flex-col justify-center items-center text-white w-4/12 m-auto p-20 bg-slate-600 rounded-md">
+<div in:scale class="flex items-center justify-center w-full h-full">
+    <div class="flex flex-col justify-center items-center text-white w-10/12 lg:w-4/12 m-auto p-20 bg-slate-600 rounded-md">
         <div>Work in progress <span class="hourglass">⌛</span><br></div>
         <div>In the meantime, you can download it : <a href="Resume_Valentin_Py.pdf" target="_blank" class="link">My Resume </a></div>
     </div>

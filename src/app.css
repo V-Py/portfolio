@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    /* Set neon color */
+    --neon-text-color: #f40;
+    --neon-border-color: #08f;
+    }
+    
 body, html {
   height: 100%;
 }

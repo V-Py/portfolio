@@ -1,14 +1,14 @@
 <script lang="ts">
+    import {fly} from 'svelte/transition';
     export let fileName:string;
     export let title:string;
     export let ref:string;
     export let link:string;
 </script>
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center pt-5 sm:pt-0" in:fly="{{x:-100, duration:200}}">
     <img
-        class="object-cover main-img"
+        class="object-cover main-img w-16 md:w-24 xl:w-32"
         src={`/${fileName}`}
-        width="100"
         alt={`picture of ${title}`}
         style:--tag={`project-${ref}`}
     />

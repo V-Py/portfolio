@@ -6,8 +6,7 @@
     
   </script>
 
-<Header />
-
 <main class="h-full w-full bg-slate-800 relative">
+  <Header />
   <slot />
 </main>

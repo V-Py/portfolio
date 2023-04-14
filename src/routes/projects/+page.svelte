@@ -11,7 +11,7 @@
 	<title>Valentin Py - Portfolio</title>
 </svelte:head>
 
-<div class="flex h-full w-full main-container">
+<div class="flex w-full pt-20 main-container">
     <div class="flex flex-col" style="flex:2;">
         <MainGrid on:projectClicked={handleProjectClicked}/>
     </div>

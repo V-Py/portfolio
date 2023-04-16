@@ -9,14 +9,14 @@
     export let project:{title:string, fileName:string, ref:string, description:string, link:string, apis_used:string[], langs:string[], platforms_used:string[]};
 
 </script>
-    <a in:fade class="project card bg-transparent hover:bg-slate-900 text-white hover:cursor-pointer h-56 w-full flex flex-col p-10 md:p-5 lg:p-10" href={`/projects/${project.ref}`}>
+    <a in:fade class="project card bg-transparent hover:bg-slate-900 text-white hover:cursor-pointer min-h-56 w-full flex flex-col p-8 md:p-5 lg:p-7" href={`/projects/${project.ref}`}>
         <div class="flex-1 flex items-center">
             <div class="avatar">
                 <div class="w-12" style="aspect-ratio:initial!important;">
                   <img class="project-img" src="/{project.fileName}" alt="calandrier" style:--tag="project-{project.ref}"/>
                 </div>
               </div>
-            <div class="projec-title flex-1 flex items-center font-bold text-xl my-1 ml-2" style:--tag="title-{project.ref}">{project.title}</div>
+            <div class="project-title flex-1 flex items-center font-bold text-xl my-1 ml-2" style:--tag="title-{project.ref}">{project.title}</div>
  
         </div>
         <div class="flex-2 flex items-center opacity-70 text-sm my-1">
@@ -61,5 +61,13 @@
 
     .project:hover img{
         filter:grayscale(0%);
+    }
+
+    .project:hover .project-title{
+        color: #fff;
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #36d399,
+        0 0 21px #36d399;
     }
 </style>

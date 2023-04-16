@@ -9,6 +9,7 @@ const apis = [
     {name: 'Dolibarr', short:'dolibarr', src: 'dolibarr.svg', color:"#F24E1E"},
     {name: 'Stripe', short:'stripe', src: 'stripe.svg', color:"#008CDD"},
     {name: 'Mailchimp', short:'mailchimp', src: 'mailchimp.svg', color:"#FFE01B"},
+    {name: 'DHL', short:'dhl', src: 'dhl.svg', color:"#FFCC00"},
 ]
 
 export default apis;

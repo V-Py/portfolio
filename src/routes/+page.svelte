@@ -13,23 +13,20 @@
             <div class="hero">
                 <div class="hero-content pt-1 text-center">
                     <div class="max-w-md">
-                    <h1 class="font-bold text-xl md:text-4xl 2xl:text-5xl" in:scale>Hello and welcome, I'm Valentin !</h1>
-                    <p class="text-justify text-gray-400 sm:columns-2 py-2 text-xs leading-4 md:text-sm md:py-4 md:leading-6 2xl:py-5 2xl:text-base 2xl:leading-7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                        nihil, eveniet aliquid culpa officia aut! 
+                    <h1 class="font-bold text-xl md:text-4xl 2xl:text-5xl" in:scale>Hi, I'm <span class="greenpunk">Valentin</span>.</h1>
+                    <p class="text-justify text-gray-400 py-2 text-xs leading-4 md:text-sm md:py-4 md:leading-6 2xl:py-5 2xl:text-base 2xl:leading-7">
+                        I'm a freelance web developer from Valence, France. I'm 30 years old and I've been working as dev for about <span class="text-xl font-bold text-success">5</span> years!
+                        My main toolbox contains HTML, CSS, PHP, MYSQL, JavaScript and TypeScript. Constantly eager to learn, my focus right now is on Svelte, SvelteKit and TailwindCSS.
+                        I created a Sass available online named <a href="https://app.calandrier.com" target="_blank" class="link text-success">calANdrier</a> which is an annual calendar.
                     </p>
-                    <p class="text-justify text-gray-400 columns-1 py-2 text-xs leading-4 md:leading-5 md:text-sm md:py-4 2xl:py-5 2xl:text-sm 2xl:leading-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                        nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                        tenetur error, harum nesciunt ipsum debitis quas aliquid.
+                    <p class="text-justify text-gray-400 columns-1 py-2 text-xs leading-4 md:leading-5 md:text-sm md:py-4 2xl:py-4 2xl:text-sm 2xl:leading-6">
+                        As as self-taught dev that re-skilled from a energy specialist formation role (degrees in science and economy) into web development, I found the open source side of the web dev community to be very welcoming and helpful.    
+                        I've been a maintainer of a few projects, and hope to be able to contribute more in the future.
+
+                        <br><span class="h4 text-base underline underline-offset-4 text-success">Sectors I have worked in:</span>
+                        As a web developer I have 4 years of experience working for small and medium companies in different sectors such as Food Production (aquaponics), Thermal & Geothermal (design offices), Sport (federation) and more.
+                        My main activity is centered around software development for professionals using an ERP (Dolibarr) to manage their business.
+                        
                     </p>
                     <a href="/projects" class=""><button class="btn btn-success">See my projects</button></a>
                     </div>
@@ -45,13 +42,13 @@
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <p class="mt-5 italic text-xs md:text-sm">
-                        30 years old french web developer, currently working as a freelance.
+                        30 years old french web developer, love to code, read things and learn.
                     </p>
                     <p class=" italic text-xs md:text-sm">
-                        Love to code and learn new things.
+                        <span class="font-bold text-sm text-success">Hobbies :</span> Sport, Nature, Books, Gardening, Cooking, Music
                     </p>
                     <p class=" italic text-xs md:text-sm">
-                        Hobbies : Sport, Nature, Books, Plants, Cooking
+                        <span class="font-bold text-sm text-success">Interests :</span> <span class="greenpunk-text">Ecology</span>, <span class="greenpunk-text">Energy</span>, <span class="greenpunk-text">Plants</span>, <span class="retrowave-text">Sci-Fi</span>, <span class="retrowave-text">Retrowave</span>
                     </p>
                 </div>
             </div>
@@ -79,10 +76,39 @@
         view-transition-name:main-container;
     }
 
-    
+    .retrowave-text:hover{
+        cursor:pointer;
+        color: #fff;
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #08f,
+        0 0 21px #08f,
+        0 0 42px #08f,
+        0 0 82px #08f,
+        0 0 92px #08f,
+        0 0 102px #08f,
+        0 0 151px #08f;
+    }
+
+    .greenpunk-text:hover, .greenpunk{
+        cursor:pointer;
+        color: #fff;
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #36d399,
+        0 0 21px #36d399,
+        0 0 42px #36d399;
+    }
 
     .retrowave:hover{
-        background:#08f;
+        /* background:#08f; */
+        box-shadow:
+        0 0 8px #fff,
+        inset 0 0 8px #fff,
+        0 0 16px #08f,
+        inset 0 0 16px #08f,
+        0 0 32px #08f,
+        inset 0 0 32px #08f;
     }
 
     @keyframes goback{

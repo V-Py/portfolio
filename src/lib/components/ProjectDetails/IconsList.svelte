@@ -5,7 +5,7 @@
     export let title:string;
 </script>
 
-<div class="flex flex-col items-center hover:bg-slate-700 py-5 px-8 rounded-md">
+<div class="flex flex-col items-center hover:bg-slate-700 py-5 px-8 rounded-md mt-3">
     <h2 class="text-xl font-bold mb-2">{title}</h2>
     <div class="grid grid-cols-3 grid-flow-row w-48">
         {#each used as item_used, index_used}

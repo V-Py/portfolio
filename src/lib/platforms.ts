@@ -11,6 +11,9 @@ const platforms = [
     {name: 'Mailchimp', short:'mailchimp', src: 'mailchimp.svg', color:"#FFE01B"},
     {name: 'Github', short:'github', src: 'github.svg', color:"#fff"},
     {name: 'Vercel', short:'vercel', src: 'vercel.svg', color:"#000"},
+    {name: 'Zeplin', short:'zeplin', src: 'zeplin.svg', color:"#000"},
+    {name: 'Bitbucket', short:'bitbucket', src: 'bitbucket.svg', color:"#0052CC"},
+    {name: 'Discord', short:'discord', src: 'discord.svg', color:"#0052CC"},
 ]
 
 export default platforms;

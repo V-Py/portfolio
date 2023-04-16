@@ -7,10 +7,10 @@
 	import Description from '$lib/components/ProjectDetails/Description.svelte';
 	import Title from '$lib/components/ProjectDetails/Title.svelte';
 	import IconsList from '$lib/components/ProjectDetails/IconsList.svelte';
+	import ImgGallery from '$lib/components/ImgGallery.svelte';
 
 	export let data;
-	let show_screenshots = false;
-	$: ({ title, fileName, ref, description, long_description, link, langs, apis_used, platforms_used} = data);
+	$: ({ title, fileName, ref, description, long_description, link, langs, apis_used, platforms_used, show_screenshots} = data);
 
 
     onMount(() => {
@@ -39,29 +39,19 @@
 		{/if}
 	</div>
 	<div class="bot w-full flex flex-col sm:flex-row justify-center" style:flex={3}>
-		<div class="flex flex-col flex-1 mt-0 p-5 sm:mt-10 sm:p-10">
-			<h2 class="flex flex-col items-center text-base p-3 lg:p-5 lg:text-lg 2xl:p-10 2xl:text-xl font-bold">
+		<div class="flex flex-col flex-1 mt-0 p-5 sm:mt-6 sm:p-10">
+			<h2 class="flex flex-col items-center text-base p-3 lg:p-5 lg:text-lg 2xl:p-7 2xl:text-xl font-bold">
 				<p>{description}</p>
 			</h2>
-			<p class="text-justify text-gray-400 columns-1 text-xs leading-4 lg:leading-5 lg:px-5 lg:text-sm 2xl:px-10 2xl:text-base 2xl:leading-6">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-				molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-				numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-				optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-				obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-				nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-				tenetur error, harum nesciunt ipsum debitis quas aliquid.
+			<p class="text-justify text-gray-400 columns-1 text-xs leading-4 lg:leading-5 lg:px-5 lg:text-sm 2xl:px-7 2xl:text-base 2xl:leading-6">
+				{@html long_description}
 			</p>
 		</div>
 		<div class="flex flex-1 items-center justify-center">
 			{#if show_screenshots}
-			<div class="avatar ml-20">
-				<div class="w-9/12 rounded-md" style="aspect-ratio:initial;">
-					<img src="/projects/{ref}/1.png" class="w-6/12" alt="first img project" />
-				</div>
-			</div>
+				<ImgGallery {ref} />
 			{:else}
-				<div class="p-3">Screenshots incoming <span class="hourglass">⌛</span></div>
+				<div class="p-3">⚠️ No screenshots available at the moment.</div>
 			{/if}
 		</div>
 	</div>

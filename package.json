@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"daisyui": "^2.51.5"
+		"daisyui": "^2.51.5",
+		"photoswipe": "^5.3.7"
 	}
 }

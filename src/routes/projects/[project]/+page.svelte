@@ -7,7 +7,7 @@
 	import Description from '$lib/components/ProjectDetails/Description.svelte';
 	import Title from '$lib/components/ProjectDetails/Title.svelte';
 	import IconsList from '$lib/components/ProjectDetails/IconsList.svelte';
-	import ImgGallery from '$lib/components/ImgGallery.svelte';
+	import ImgGallery from '$lib/components/ProjectDetails/ImgGallery.svelte';
 
 	export let data;
 	$: ({ title, fileName, ref, description, long_description, link, langs, apis_used, platforms_used, show_screenshots} = data);

@@ -1,11 +1,6 @@
 <script lang="ts">
   import {page} from '$app/stores';
-  import {scale, fly} from 'svelte/transition';
-  import {onMount} from 'svelte';
-
-  onMount(()=>{
-    console.log('PAGE', $page);
-  })
+  import {fly} from 'svelte/transition';
 </script>
 
 <nav class="navbar bg-slate-900 text-white w-full flex h-20 absolute top-0">
@@ -18,10 +13,6 @@
         <div out:fly="{{y:-200, duration:300}}" class="w-10 rounded-full">
           <a href="/"><img src="/me.jpg" alt="me" id="main-img"/></a>
         </div>
-      <!-- {:else}
-        <div class="w-10 rounded-full">
-          <a in:fly="{{x:100, duration:200, delay:300}}" href="/projects"><img src="/arrow-left-light.svg" alt="return" width="30"/></a>
-        </div> -->
       {/if}
 
 
@@ -32,7 +23,6 @@
       <ul class="menu menu-horizontal px-1">
         <li ><a href="/projects" class="text-xl active:bg-slate-700 font-bold main-text">Projects</a></li>
         <li><a href="/curriculum" class="active:bg-slate-700">Curriculum</a></li>
-        <!-- <li><a href="/aboutme">About me</a></li> -->
       </ul>
     </div>
     <!-- <div class="absolute right-10">

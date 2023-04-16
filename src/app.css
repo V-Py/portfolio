@@ -45,3 +45,20 @@ body, html {
   animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
+
+.project:hover .project-title{
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #36d399,
+    0 0 21px #36d399;
+}
+
+    
+.project img:not(.project-img){
+    filter:grayscale(100%);
+}
+
+.project:hover img{
+    filter:grayscale(0%);
+}

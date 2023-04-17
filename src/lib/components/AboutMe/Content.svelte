@@ -2,7 +2,7 @@
     import {scale} from 'svelte/transition';
 </script>
 
-<div class="hero">
+<div class="hero h-full">
     <div class="hero-content pt-1 text-center">
         <div class="max-w-md">
         <h1 class="font-bold text-xl md:text-4xl 2xl:text-5xl" in:scale>Hi, I'm <span class="greenpunk">Valentin</span>.</h1>

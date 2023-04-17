@@ -3,7 +3,7 @@
   import {fly} from 'svelte/transition';
 </script>
 
-<nav class="navbar bg-slate-900 text-white w-full flex h-20 absolute top-0">
+<nav class="navbar bg-slate-900 text-white w-full flex h-20 absolute top-0 z-10">
     <label class="btn btn-ghost btn-circle avatar" for="main-img">
       {#if $page.url.pathname === '/' }
         <div in:fly="{{x:100, duration:200, delay:300}}" class="w-10 rounded-full">

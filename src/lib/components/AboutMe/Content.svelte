@@ -9,7 +9,7 @@
         <p class="text-justify text-gray-400 py-2 text-xs leading-4 md:text-sm md:py-4 md:leading-6 2xl:py-5 2xl:text-base 2xl:leading-7">
             I'm a freelance web developer from Valence, France. I'm 30 years old and I've been working as dev for about <span class="text-xl font-bold text-success">5</span> years!
             My main toolbox contains HTML, CSS, PHP, MYSQL, JavaScript and TypeScript. Constantly eager to learn, my focus right now is on Svelte, SvelteKit and TailwindCSS, applied to Web app (PWA).
-            I created a Sass available online named <a href="https://app.calandrier.com" target="_blank" class="link text-success">calANdrier</a> which is an annual calendar.
+            I created a SaaS available online named <a href="https://app.calandrier.com" target="_blank" class="link text-success">calANdrier</a> which is an annual calendar.
         </p>
         <p class="text-justify text-gray-400 columns-1 py-2 text-xs leading-4 md:leading-5 md:text-sm md:py-4 2xl:py-4 2xl:text-sm 2xl:leading-6">
             As as self-taught dev that re-skilled from a energy specialist formation role (degrees in science and economy) into web development, I found the open source side of the web dev community to be very welcoming and helpful.    
@@ -31,7 +31,7 @@
         text-shadow:
         0 0 7px #fff,
         0 0 10px #36d399,
-        0 0 21px #36d399,
-        0 0 42px #36d399;
+        0 0 21px #36d399;
+        /* 0 0 42px #36d399; */
     }
 </style>

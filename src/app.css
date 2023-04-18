@@ -50,8 +50,8 @@ body, html {
     color: #fff;
     text-shadow:
     0 0 7px #fff,
-    0 0 10px #36d399,
-    0 0 21px #36d399;
+    0 0 10px #36d399;
+    /* 0 0 15px #36d399; */
 }
 
     

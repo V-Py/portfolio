@@ -8,8 +8,8 @@
 </svelte:head>
 
 <div class="flex h-full w-full main-container justify-center items-center text-white overflow-auto">
-    <div class="flex flex-col-reverse pt-20 w-full md:flex-row md:mx-20 h-full m-auto xl:mx-40 2xl:mx-48 ">
-        <div class="left h-full flex-1 flex flex-col p-2 md:p-5 2xl:p-10">
+    <div class="flex flex-col-reverse overflow-scroll sm:overflow-hidden pt-20 w-full md:flex-row md:mx-20 h-full m-auto xl:mx-40 2xl:mx-48">
+        <div class="left h-full flex-1 flex flex-col p-2 md:p-5 2xl:p-6">
             <Content />
         </div>
         <div class="right sm:flex-1 flex-col items-center flex p-2 md:p-8 2xl:p-12">
